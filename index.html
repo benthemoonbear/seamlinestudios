@@ -331,6 +331,12 @@ form{box-shadow:0 0 0 1px var(--line),0 30px 60px -40px rgba(20,30,70,.35)}
 .paused .hero-field svg.loop,.paused .hero-field .glow,.paused .eyebrow i{animation-play-state:paused}
 .invite.paused svg.loop{animation-play-state:paused}
 @media (prefers-reduced-motion:reduce){.hero-field svg.loop,.invite svg.loop{animation:none}}
+/* project status pill, e.g. "In progress" */
+.copy .num{display:flex;align-items:center;gap:12px}
+.status{display:inline-flex;align-items:center;gap:7px;font-size:.75rem;font-weight:600;color:var(--fg);padding:4px 11px 4px 9px;border-radius:999px;
+  background:var(--accent-tint);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--accent) 30%,transparent)}
+.status::before{content:"";width:7px;height:7px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent-2));animation:pulse 2.8s ease-in-out infinite}
+@media (prefers-reduced-motion:reduce){.status::before{animation:none}}
 </style>
 </head>
 <body>
@@ -444,6 +450,14 @@ const PROJECTS = [
     url: "https://jollyfelties.com",
     summary: "A bilingual landing page for Irini Adler's lifelike felted animals, with a gallery and a simple way to commission your own pet.",
     image: "img/jolly.jpg"
+  },
+  {
+    name: "Derwent Fire Compliance",
+    type: "Independent fire risk assessors · Derbyshire",
+    url: "https://derwentfirecompliance.netlify.app",
+    summary: "A new site for a chartered fire risk assessor in Belper. It explains plainly when the law applies, puts the credentials up front, and makes it quick to request a quote across Derbyshire, Staffordshire and Nottinghamshire.",
+    image: "img/derwent.jpg",
+    status: "In progress"
   }
   // ,{
   //   name: "New Client",
@@ -478,7 +492,7 @@ document.getElementById("projects").innerHTML = PROJECTS.map((p, i) => `
       <span class="tag">Visit ${esc(host(p.url))} ↗</span>
     </a>
     <div class="copy">
-      <div class="num">${String(i + 1).padStart(2, "0")}</div>
+      <div class="num">${String(i + 1).padStart(2, "0")}${p.status ? `<span class="status">${esc(p.status)}</span>` : ""}</div>
       <h3>${esc(p.name)}</h3>
       <p class="type">${esc(p.type)}</p>
       <p>${esc(p.summary)}</p>
