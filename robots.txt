@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://seamlinestudio.co.uk/sitemap.xml
