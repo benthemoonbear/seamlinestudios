@@ -16,22 +16,17 @@ The contact form uses Netlify Forms.
 3. Under **Forms → Form notifications**, add an email notification so each enquiry is emailed to you.
 
 ## Adding a project to the portfolio
-1. Save a 1280×800 screenshot of the site's homepage into `img/` (for example `img/new-client.jpg`).
-2. In `index.html`, find `const PROJECTS = [` and copy one of the project blocks:
-   ```js
-   {
-     name: "New Client",
-     type: "What the business does",
-     url: "https://example.co.uk",
-     summary: "One or two sentences about the project.",
-     image: "img/new-client.jpg"
-   }
-   ```
-3. Commit the change. Netlify publishes it within a minute.
+The projects are written straight into `index.html`, so search engines and AI tools can read them.
+1. Save a 1280×800 screenshot of the site's homepage as `img/new-client.jpg`.
+2. Make the smaller and lighter copies: `img/new-client-640.jpg`, `img/new-client.webp` and `img/new-client-640.webp` (or ask Claude to do it).
+3. In `index.html`, find the comment `PORTFOLIO:`, copy one whole `<article class="project">` block and change the name, link, text, image names and number.
+4. To mark unfinished work, keep `<span class="status">In progress</span>` after the number.
+5. Commit the change. Netlify publishes it within a minute.
 
 ## Files
 - `index.html` – the whole site
 - `img/` – portfolio screenshots
 - `favicon.*`, `apple-touch-icon.png`, `icon-*.png`, `site.webmanifest` – browser and home-screen icons
-- `og-image.png` – the preview image shown when the link is shared
+- `og-image.jpg` – the preview image shown when the link is shared
+- `llms.txt` – a plain summary of the business for AI search tools
 - `404.html` – the page-not-found page
