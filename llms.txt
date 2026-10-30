@@ -18,6 +18,7 @@
 - Zen Visuals (https://zenvisuals.co.uk): full redesign for a wedding and commercial photography and film studio in Derbyshire.
 - Jolly Felties (https://jollyfelties.com): bilingual landing page for lifelike needle-felted animal sculptures.
 - Derwent Fire Compliance: new site for a chartered fire risk assessor in Belper (in progress).
+- One to One: site for a dog walking and cat sitting business in Belper, with online booking requests (in progress).
 
 ## Contact
 - Website: https://seamlinestudios.co.uk/
