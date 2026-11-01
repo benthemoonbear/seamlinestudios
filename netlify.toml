@@ -17,3 +17,23 @@
   from = "/work/anthonys-little-harbour"
   to = "/work/anthonys-little-harbour.html"
   status = 200
+
+[[redirects]]
+  from = "/work/zen-visuals"
+  to = "/work/zen-visuals.html"
+  status = 200
+
+[[redirects]]
+  from = "/work/jolly-felties"
+  to = "/work/jolly-felties.html"
+  status = 200
+
+[[redirects]]
+  from = "/work/derwent-fire-compliance"
+  to = "/work/derwent-fire-compliance.html"
+  status = 200
+
+[[redirects]]
+  from = "/work/one-to-one"
+  to = "/work/one-to-one.html"
+  status = 200
