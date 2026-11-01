@@ -11,3 +11,9 @@
   for = "/img/*"
   [headers.values]
     Cache-Control = "public, max-age=604800"
+
+# Case study pages are served without ".html"
+[[redirects]]
+  from = "/work/anthonys-little-harbour"
+  to = "/work/anthonys-little-harbour.html"
+  status = 200
