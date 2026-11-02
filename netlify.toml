@@ -37,3 +37,8 @@
   from = "/work/one-to-one"
   to = "/work/one-to-one.html"
   status = 200
+
+[[redirects]]
+  from = "/offer"
+  to = "/offer.html"
+  status = 200

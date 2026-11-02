@@ -616,9 +616,20 @@ footer .locale{margin:28px 0 0;font-size:.9rem;color:var(--muted);max-width:60ch
 
 .copy .links{display:flex;flex-wrap:wrap;gap:4px 28px;align-items:center}
 .copy .links .link{margin-top:22px}
+
+/* November offer banner (hides itself after the deadline) */
+.offer-bar{display:block;text-decoration:none;color:#fff;background:linear-gradient(100deg,var(--accent),var(--accent-2) 70%,var(--accent-3));font-size:.9rem;font-weight:500;text-align:center;padding:9px max(16px,env(safe-area-inset-left,0px))}
+.offer-bar b{font-weight:700}
+.offer-bar:hover span.arr{transform:translateX(4px)}
+.offer-bar span.arr{display:inline-block;transition:transform .4s var(--ease)}
+.offer-callout{margin-top:20px;display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;justify-content:space-between;padding:20px 24px;border-radius:22px;color:#F2F3F5;
+  background:radial-gradient(80% 120% at 100% 0%,rgba(124,92,255,.45),transparent 60%),radial-gradient(70% 120% at 0% 100%,rgba(59,91,219,.55),transparent 60%),#111317}
+.offer-callout p{margin:0;font-size:1.02rem}.offer-callout b{font-weight:700}
+.offer-callout .btn{background:#F2F3F5;color:#111317}
 </style>
 </head>
 <body>
+<a class="offer-bar" href="/offer" data-offer-until="2026-11-30T23:59:59Z"><b>November offer:</b> £30 off your website and £15 a month hosting, for good. Ends 30 November <span class="arr">→</span></a>
 <div class="progress" aria-hidden="true"><i id="progress"></i></div>
 <header id="topbar">
   <div class="wrap bar">
@@ -807,6 +818,7 @@ footer .locale{margin:28px 0 0;font-size:.9rem;color:var(--muted);max-width:60ch
           </ul>
         </article>
       </div>
+      <div class="offer-callout rise" data-offer-until="2026-11-30T23:59:59Z"><p><b>November offer:</b> website £250 and hosting £15 a month or £150 a year, locked in. Ends 30 November.</p><a class="btn" href="/offer">See the offer <span class="arr">→</span></a></div>
       <div class="pricing-foot rise">
         <p>Need more pages or extras? <a href="#contact">Get in touch for a quote.</a></p>
         <a class="btn primary" href="#contact" data-mockup>Get a free homepage mock‑up <span class="arr">→</span></a>
@@ -878,7 +890,7 @@ footer .locale{margin:28px 0 0;font-size:.9rem;color:var(--muted);max-width:60ch
           <div class="f"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
         </div>
         <div class="f"><label for="f-type">What do you need?</label>
-          <select id="f-type" name="project"><option>A new website</option><option>A redesign</option><option>A landing page</option><option>A free homepage mock-up</option><option>Not sure yet</option></select></div>
+          <select id="f-type" name="project"><option>A new website</option><option>A redesign</option><option>A landing page</option><option>A free homepage mock-up</option><option>The November offer</option><option>Not sure yet</option></select></div>
         <div class="f"><label for="f-msg">About your business</label><textarea id="f-msg" name="message"></textarea></div>
         <div class="send"><button class="btn primary" type="submit">Send enquiry <span class="arr">→</span></button><p class="note" id="formNote"></p></div>
       </form>
@@ -1043,6 +1055,10 @@ document.querySelectorAll("[data-mockup]").forEach(a => a.addEventListener("clic
 }));
 
 document.getElementById("yr").textContent = new Date().getFullYear();
+
+/* ---------- November offer: hide after the deadline; preselect it in the form when claimed ---------- */
+document.querySelectorAll("[data-offer-until]").forEach(el => { if (Date.now() > new Date(el.dataset.offerUntil).getTime()) el.remove(); });
+if (/[?&]offer=november/.test(location.search)) { const sel = document.getElementById("f-type"); if (sel) sel.value = "The November offer"; }
 </script>
 </body>
 </html>
