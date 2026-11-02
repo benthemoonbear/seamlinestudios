@@ -565,6 +565,15 @@ footer .locale{margin:28px 0 0;font-size:.9rem;color:var(--muted);max-width:60ch
 .incl h3{margin:0;font-size:1.15rem;font-weight:600}
 .small-print{margin-top:28px;font-size:.85rem;color:var(--muted);max-width:70ch}
 .offer-ended .countdown,.offer-ended .ctas .btn.primary{display:none}
+
+.review{position:relative;overflow:hidden;margin:44px 0 0;background:var(--surface);border-radius:24px;padding:clamp(28px,5vw,52px);box-shadow:0 0 0 1px var(--line)}
+.review::before{content:"";position:absolute;inset:0 0 auto;height:4px;background:linear-gradient(90deg,#3B5BDB,#7C5CFF,#2BB6C9)}
+.review .stars{color:#F5B301;font-size:1.15rem;letter-spacing:4px}
+.review blockquote{margin:14px 0 0;font-size:clamp(1.15rem,2.4vw,1.55rem);line-height:1.5;font-weight:500;letter-spacing:-.01em;color:var(--fg);max-width:52ch}
+.review figcaption{margin-top:24px;display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;font-size:.95rem;color:var(--muted)}
+.review figcaption b{color:var(--fg);font-weight:600}
+.review figcaption a{color:var(--accent);font-weight:600;text-decoration:none}
+.review figcaption a:hover{text-decoration:underline}
 </style>
 </head>
 <body>
@@ -612,6 +621,18 @@ footer .locale{margin:28px 0 0;font-size:.9rem;color:var(--muted);max-width:60ch
       <p class="kicker rise">Everything we've made</p>
       <h2 class="rise">Five businesses, <span class="soft">five sites made to measure.</span></h2>
       <div class="work-grid"><a class="rise" href="/work/anthonys-little-harbour"><div class="frame"><picture><source type="image/webp" srcset="/img/harbour-640.webp 640w, /img/harbour.webp 1280w" sizes="(max-width: 520px) calc(100vw - 40px), (max-width: 900px) 50vw, 530px"><img src="/img/harbour.jpg" srcset="/img/harbour-640.jpg 640w, /img/harbour.jpg 1280w" sizes="(max-width: 520px) calc(100vw - 40px), (max-width: 900px) 50vw, 530px" alt="Anthony's Little Harbour Series website homepage, designed by Seamline Studio" width="1280" height="800" loading="lazy" decoding="async"></picture></div><h3>Anthony's Little Harbour Series</h3><p>Children's picture books, with a simple book shop built in</p><span class="more">Read the case study →</span></a><a class="rise" href="/work/derwent-fire-compliance"><div class="frame"><picture><source type="image/webp" srcset="/img/derwent-640.webp 640w, /img/derwent.webp 1280w" sizes="(max-width: 520px) calc(100vw - 40px), (max-width: 900px) 50vw, 530px"><img src="/img/derwent.jpg" srcset="/img/derwent-640.jpg 640w, /img/derwent.jpg 1280w" sizes="(max-width: 520px) calc(100vw - 40px), (max-width: 900px) 50vw, 530px" alt="Derwent Fire Compliance website homepage, designed by Seamline Studio" width="1280" height="800" loading="lazy" decoding="async"></picture></div><h3>Derwent Fire Compliance</h3><p>Fire risk assessors across three counties</p><span class="more">Read the case study →</span></a><a class="rise" href="/work/one-to-one"><div class="frame"><picture><source type="image/webp" srcset="/img/onetoone-640.webp 640w, /img/onetoone.webp 1280w" sizes="(max-width: 520px) calc(100vw - 40px), (max-width: 900px) 50vw, 350px"><img src="/img/onetoone.jpg" srcset="/img/onetoone-640.jpg 640w, /img/onetoone.jpg 1280w" sizes="(max-width: 520px) calc(100vw - 40px), (max-width: 900px) 50vw, 350px" alt="One to One website homepage, designed by Seamline Studio" width="1280" height="800" loading="lazy" decoding="async"></picture></div><h3>One to One</h3><p>Dog walking and cat sitting in Belper, with online booking</p><span class="more">Read the case study →</span></a><a class="rise" href="/work/zen-visuals"><div class="frame"><picture><source type="image/webp" srcset="/img/zen-640.webp 640w, /img/zen.webp 1280w" sizes="(max-width: 520px) calc(100vw - 40px), (max-width: 900px) 50vw, 350px"><img src="/img/zen.jpg" srcset="/img/zen-640.jpg 640w, /img/zen.jpg 1280w" sizes="(max-width: 520px) calc(100vw - 40px), (max-width: 900px) 50vw, 350px" alt="Zen Visuals website homepage, designed by Seamline Studio" width="1280" height="800" loading="lazy" decoding="async"></picture></div><h3>Zen Visuals</h3><p>Wedding and commercial photography and film</p><span class="more">Read the case study →</span></a><a class="rise" href="/work/jolly-felties"><div class="frame"><picture><source type="image/webp" srcset="/img/jolly-640.webp 640w, /img/jolly.webp 1280w" sizes="(max-width: 520px) calc(100vw - 40px), (max-width: 900px) 50vw, 350px"><img src="/img/jolly.jpg" srcset="/img/jolly-640.jpg 640w, /img/jolly.jpg 1280w" sizes="(max-width: 520px) calc(100vw - 40px), (max-width: 900px) 50vw, 350px" alt="Jolly Felties website homepage, designed by Seamline Studio" width="1280" height="800" loading="lazy" decoding="async"></picture></div><h3>Jolly Felties</h3><p>Felt animal sculptures, in German and English</p><span class="more">Read the case study →</span></a></div>
+    </div>
+  </section>
+
+  <section class="cs-sec" id="reviews">
+    <div class="wrap">
+      <p class="kicker rise">What clients say</p>
+      <h2 class="rise">Don't just take <span class="soft">our word for it.</span></h2>
+      <figure class="review rise">
+        <div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>“Where do I start. On Saturday afternoon Ben said that he could create a website for my children's story books. I was amazed that he had completed it by Sunday afternoon. with a few tweaks in the evening. Ben couldn't do enough for me. I would definitely recommend his services.”</blockquote>
+        <figcaption><span><b>Anthony Goode</b> · author, Anthony's Little Harbour Series</span><a href="https://g.page/r/CfXEJOnPyH15ECE" target="_blank" rel="noopener">Read it on Google →</a></figcaption>
+      </figure>
     </div>
   </section>
 

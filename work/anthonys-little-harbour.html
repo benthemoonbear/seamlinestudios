@@ -532,6 +532,15 @@ footer .locale{margin:28px 0 0;font-size:.9rem;color:var(--muted);max-width:60ch
 .tech p{margin:0;color:var(--muted);font-size:.95rem}
 .cs-end{margin-block:clamp(64px,9vw,110px) 40px}
 .credit{margin-top:22px;font-size:.85rem;color:var(--muted)}
+
+.review{position:relative;overflow:hidden;margin:44px 0 0;background:var(--surface);border-radius:24px;padding:clamp(28px,5vw,52px);box-shadow:0 0 0 1px var(--line)}
+.review::before{content:"";position:absolute;inset:0 0 auto;height:4px;background:linear-gradient(90deg,#3B5BDB,#7C5CFF,#2BB6C9)}
+.review .stars{color:#F5B301;font-size:1.15rem;letter-spacing:4px}
+.review blockquote{margin:14px 0 0;font-size:clamp(1.15rem,2.4vw,1.55rem);line-height:1.5;font-weight:500;letter-spacing:-.01em;color:var(--fg);max-width:52ch}
+.review figcaption{margin-top:24px;display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;font-size:.95rem;color:var(--muted)}
+.review figcaption b{color:var(--fg);font-weight:600}
+.review figcaption a{color:var(--accent);font-weight:600;text-decoration:none}
+.review figcaption a:hover{text-decoration:underline}
 </style>
 </head>
 <body>
@@ -638,6 +647,18 @@ footer .locale{margin:28px 0 0;font-size:.9rem;color:var(--muted);max-width:60ch
         <div class="rise"><h3>Place the order</h3><p>Name, email and address. Anthony is emailed the order straight away.</p></div>
         <div class="rise"><h3>Pay by bank transfer</h3><p>Anthony replies with his bank details and posts the books once paid.</p></div>
       </div>
+    </div>
+  </section>
+
+  <section class="cs-sec" id="reviews">
+    <div class="wrap">
+      <p class="kicker rise">In Anthony's words</p>
+      <h2 class="rise">From a chat on Saturday <span class="soft">to a website on Sunday.</span></h2>
+      <figure class="review rise">
+        <div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>“Where do I start. On Saturday afternoon Ben said that he could create a website for my children's story books. I was amazed that he had completed it by Sunday afternoon. with a few tweaks in the evening. Ben couldn't do enough for me. I would definitely recommend his services.”</blockquote>
+        <figcaption><span><b>Anthony Goode</b> · author of the books</span><a href="https://g.page/r/CfXEJOnPyH15ECE" target="_blank" rel="noopener">Read it on Google →</a></figcaption>
+      </figure>
     </div>
   </section>
 
