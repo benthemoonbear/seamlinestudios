@@ -574,6 +574,14 @@ footer .locale{margin:28px 0 0;font-size:.9rem;color:var(--muted);max-width:60ch
 .review figcaption b{color:var(--fg);font-weight:600}
 .review figcaption a{color:var(--accent);font-weight:600;text-decoration:none}
 .review figcaption a:hover{text-decoration:underline}
+
+.reviews{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:44px;align-items:stretch}
+.reviews .review{margin:0;display:flex;flex-direction:column}
+.reviews .review blockquote{font-size:clamp(1.05rem,1.7vw,1.22rem);line-height:1.55;flex:1}
+@media (max-width:860px){.reviews{grid-template-columns:1fr}}
+.review .orig{margin:18px 0 0;font-size:.95rem;line-height:1.6;color:var(--muted);max-width:70ch}
+.review .orig summary{cursor:pointer;color:var(--accent);font-weight:600;list-style:none}
+.review .orig summary::-webkit-details-marker{display:none}
 </style>
 </head>
 <body>
@@ -628,11 +636,18 @@ footer .locale{margin:28px 0 0;font-size:.9rem;color:var(--muted);max-width:60ch
     <div class="wrap">
       <p class="kicker rise">What clients say</p>
       <h2 class="rise">Don't just take <span class="soft">our word for it.</span></h2>
+      <div class="reviews">
       <figure class="review rise">
         <div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
         <blockquote>“Where do I start. On Saturday afternoon Ben said that he could create a website for my children's story books. I was amazed that he had completed it by Sunday afternoon. with a few tweaks in the evening. Ben couldn't do enough for me. I would definitely recommend his services.”</blockquote>
         <figcaption><span><b>Anthony Goode</b> · author, Anthony's Little Harbour Series</span><a href="https://g.page/r/CfXEJOnPyH15ECE" target="_blank" rel="noopener">Read it on Google →</a></figcaption>
       </figure>
+      <figure class="review rise">
+        <div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>“Ben created an outstanding website – very professional, well-organized, and he left no stone unturned. We had/have a very positive and enjoyable collaboration. His suggestions were implemented quickly and effectively, as if he could read my mind. The value for money is excellent! Many thanks, Ben! I will recommend your work with the utmost pleasure and satisfaction!”</blockquote>
+        <figcaption><span><b>Irini Aetos</b> · Jolly Felties</span><a href="https://g.page/r/CfXEJOnPyH15ECE" target="_blank" rel="noopener">Read it on Google →</a></figcaption>
+      </figure>
+      </div>
     </div>
   </section>
 
