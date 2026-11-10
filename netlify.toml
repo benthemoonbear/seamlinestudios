@@ -44,3 +44,8 @@
   from = "/offer"
   to = "/offer.html"
   status = 200
+
+[[redirects]]
+  from = "/web-design-for-small-businesses"
+  to = "/web-design-for-small-businesses.html"
+  status = 200
