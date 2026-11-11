@@ -525,6 +525,19 @@ footer .locale{margin:28px 0 0;font-size:.9rem;color:var(--muted);max-width:60ch
 .more-grid span{display:block;margin-top:6px;font-size:.9rem;color:var(--muted)}
 .more-foot{margin:22px 0 0;color:var(--muted)} .more-foot a{color:var(--accent);font-weight:600;text-decoration:none}
 @media (max-width:860px){.more-grid{grid-template-columns:1fr 1fr}}
+
+.ba{position:relative;margin-top:44px;aspect-ratio:16/10;border-radius:20px;overflow:hidden;background:var(--surface);box-shadow:0 34px 70px -34px rgba(10,15,30,.4),0 0 0 1px var(--line);touch-action:pan-y}
+.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.ba-before{position:absolute;inset:0;clip-path:inset(0 calc(100% - var(--p)) 0 0)}
+.ba-lab{position:absolute;top:14px;z-index:2;font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:999px;background:rgba(17,19,23,.72);color:#fff;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.ba-lab.l{left:14px} .ba-lab.r{right:14px}
+.ba-handle{position:absolute;top:0;bottom:0;left:var(--p);width:2px;margin-left:-1px;background:#fff;box-shadow:0 0 0 1px rgba(17,19,23,.25);z-index:2;pointer-events:none}
+.ba-handle i{position:absolute;top:50%;left:50%;width:44px;height:44px;margin:-22px 0 0 -22px;border-radius:50%;background:#fff;box-shadow:0 8px 24px -6px rgba(0,0,0,.45),0 0 0 1px rgba(17,19,23,.12)}
+.ba-handle i::before,.ba-handle i::after{content:"";position:absolute;top:50%;width:8px;height:8px;border:solid #111317;border-width:2px 0 0 2px;margin-top:-5px}
+.ba-handle i::before{left:11px;transform:rotate(-45deg)} .ba-handle i::after{right:11px;transform:rotate(135deg)}
+.ba input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize;z-index:3}
+.ba:focus-within .ba-handle i{box-shadow:0 0 0 3px var(--accent),0 8px 24px -6px rgba(0,0,0,.45)}
+.ba-hint{margin:14px 0 0;font-size:.9rem;color:var(--muted)}
 </style>
 </head>
 <body>
@@ -635,6 +648,21 @@ footer .locale{margin:28px 0 0;font-size:.9rem;color:var(--muted);max-width:60ch
     </div>
   </section>
 
+  <section class="cs-sec">
+    <div class="wrap">
+      <p class="kicker rise">Before and after</p>
+      <h2 class="rise">Same books, <span class="soft">a whole new harbour.</span></h2>
+      <div class="ba rise" id="ba" style="--p:50%">
+        <picture><source type="image/webp" srcset="/img/harbour.webp"><img src="/img/harbour.jpg" alt="The new Anthony's Little Harbour Series website, designed by Seamline Studio" width="1280" height="800" loading="lazy" decoding="async"></picture>
+        <div class="ba-before"><picture><source type="image/webp" srcset="/img/harbour/before.webp"><img src="/img/harbour/before.jpg" alt="Anthony's previous website, before the redesign" width="1280" height="800" loading="lazy" decoding="async"></picture></div>
+        <span class="ba-lab l">Before</span><span class="ba-lab r">After</span>
+        <span class="ba-handle" aria-hidden="true"><i></i></span>
+        <input type="range" min="0" max="100" value="50" step="0.1" aria-label="Drag to compare the old website with the new one">
+      </div>
+      <p class="ba-hint rise">Drag the handle to compare.</p>
+    </div>
+  </section>
+
   <section class="cs-sec" id="reviews">
     <div class="wrap">
       <p class="kicker rise">In Anthony's words</p>
@@ -701,5 +729,6 @@ footer .locale{margin:28px 0 0;font-size:.9rem;color:var(--muted);max-width:60ch
   items.forEach(el => io.observe(el));
 })();
 </script>
+<script>(function(){const b=document.getElementById("ba");if(!b)return;const r=b.querySelector("input");r.addEventListener("input",()=>b.style.setProperty("--p",r.value+"%"));})();</script>
 </body>
 </html>
